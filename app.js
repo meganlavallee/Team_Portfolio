@@ -1,6 +1,6 @@
-const Manager = require("./script/Manager");
-const Engineer = require("./script/Engineer");
-const Intern = require("./script/Intern");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -12,6 +12,25 @@ const render = require("./lib/htmlRenderer");
 
 
 // Write code to use inquirer to gather information about the development team members,
+const inquirer = require('inquirer');
+inquirer
+    .prompt([
+        {
+            name: "name",
+            type: "input",
+            message: "What is your name?",
+        },
+        // Questions
+        // Name, Role, Email, ID, GitHub, School
+    ])
+    .then((answers => {
+        console.log('hello'+ answers.name);
+        if(error.isTtyError){
+            // Error
+        } else {
+            // Something else when wrong
+        }
+    }));
 // and to create objects for each team member (using the correct classes as blueprints!)
 
 // After the user has input all employees desired, call the `render` function (required
