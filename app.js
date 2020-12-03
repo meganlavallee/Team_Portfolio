@@ -12,13 +12,38 @@ const render = require("./lib/htmlRenderer");
 
 
 // Write code to use inquirer to gather information about the development team members,
-const inquirer = require('inquirer');
+
 inquirer
     .prompt([
         {
             name: "name",
             type: "input",
             message: "What is your name?",
+        },
+        {
+            name: "role",
+            type: "list",
+            message: "What is your role?",
+        },
+        {
+            name: "email",
+            type: "input",
+            message: "What is your email?",
+        },
+        {
+            name: "id",
+            type: "input",
+            message: "What is your ID number?",
+        },
+        {
+            name: "github",
+            type: "input",
+            message: "What is your GitHub username?",
+        },
+        {
+            name: "school",
+            type: "input",
+            message: "What school are you going to?",
         },
         // Questions
         // Name, Role, Email, ID, GitHub, School
